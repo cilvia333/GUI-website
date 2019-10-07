@@ -4,6 +4,7 @@
 	'rules': {
 		'no-descending-specificity': null,
 		'no-duplicate-selectors': null,
-		'selector-pseudo-element-colon-notation': 'double'
+		'selector-pseudo-element-colon-notation': 'double',
+		'no-empty-source': null
 	}
 }
