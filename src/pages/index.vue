@@ -7,6 +7,7 @@ main.index
     h1.title 
     ul
       li.index-item: nuxt-link.index-link.link(to="/task1") 対になる絵
+      li.index-item: nuxt-link.index-link.link(to="/task3") 道具の調査レポート
 </template>
 
 <script lang="ts">

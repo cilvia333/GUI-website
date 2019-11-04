@@ -1,10 +1,11 @@
 <template lang="pug">
-header
-  h1.header-title GUI表現研究
-  nav.header-nav
-    ul
-      li: nuxt-action-link.header-link(to="/") TOP
-      li: nuxt-action-link.header-link(to="/task1") 対になる絵
+	header
+		h1.header-title GUI表現研究
+		nav.header-nav
+			ul
+				li: nuxt-action-link.header-link(to="/") TOP
+				li: nuxt-action-link.header-link(to="/task1") 対になる絵
+				li: nuxt-action-link.header-link(to="/task3") 道具の調査レポート
 </template>
 
 <script>
