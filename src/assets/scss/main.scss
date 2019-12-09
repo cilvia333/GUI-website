@@ -30,11 +30,22 @@
 	margin-bottom: 30px;
 	color: $black;
 	display: inline-block;
+	position: relative;
 
 	.logo-title {
 		font-size: 30px;
 	}
 	.logo-subtitle {
 		font-size: 10px;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: -7px;
+		left: 0px;
+		height: 2px;
+		width: 8px;
+		background-color: $black;
 	}
 }
