@@ -29,8 +29,7 @@ html {
 }
 
 main {
-	height: calc(100vh - 160px);
-	margin: 80px 55px;
+	margin: 10px 55px;
 }
 
 .container {

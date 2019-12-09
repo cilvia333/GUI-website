@@ -1,3 +1,40 @@
 @import './colors';
 @import './mixins';
 @import './variables';
+
+.task-title {
+	display: block;
+	position: relative;
+	font-weight: normal;
+	span {
+		font-weight: bold;
+		display: inline;
+	}
+}
+
+.pdf-link {
+	color: $white;
+	background-color: $primary;
+	margin-top: 20px;
+	padding: 10px 30px;
+	text-align: center;
+	display: inline-block;
+	border-radius: 20px;
+
+	&:hover {
+		transform: translate(2px, 2px);
+	}
+}
+
+.task-logo {
+	margin-bottom: 30px;
+	color: $black;
+	display: inline-block;
+
+	.logo-title {
+		font-size: 30px;
+	}
+	.logo-subtitle {
+		font-size: 10px;
+	}
+}

@@ -19,7 +19,7 @@ main.index
           nuxt-link.index-link.link(to="/task3") 道具の調査レポート
       li.index-links-item
           .index-link-index task4
-          nuxt-link.index-link.link(to="/task3") none
+          nuxt-link.index-link.link(to="/task4") インターフェースのデザイン
 </template>
 
 <script lang="ts">
@@ -37,6 +37,11 @@ export default createComponent({
 </script>
 
 <style lang="scss" scoped>
+.index {
+	height: calc(100vh - 160px);
+	margin: 80px 55px;
+}
+
 .container {
 	position: relative;
 }
@@ -78,17 +83,52 @@ export default createComponent({
 		margin-top: 80px;
 		position: relative;
 
+		& > * {
+			transition: 0.3s cubic-bezier(0.1, 0, 0, 1);
+		}
+
 		.index-link-index {
 			position: absolute;
 			top: -1.8rem;
 			left: 0;
+			transform: skewX(0deg) translateX(0px);
+			letter-spacing: 0px;
 			font-size: 2rem;
 		}
 		.index-link {
 			display: inline-block;
 			color: $black;
-			background: $gray;
 			font-size: 3rem;
+			transform: skewX(0deg) translateX(0px);
+			letter-spacing: 0px;
+			position: relative;
+
+			&::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				background: $gray;
+				width: 100%;
+				height: 100%;
+				z-index: -1;
+			}
+		}
+
+		&:hover {
+			.index-link-index {
+				transform: skewX(-30deg) translateX(-10px);
+				letter-spacing: 30px;
+				font-style: italic;
+			}
+			.index-link {
+				transform: skewX(-30deg) translateX(-10px);
+				letter-spacing: 20px;
+				font-style: italic;
+				&::after {
+					transform: skewX(30deg);
+				}
+			}
 		}
 	}
 }
