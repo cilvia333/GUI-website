@@ -2,25 +2,50 @@
 @import './mixins';
 @import './variables';
 
-header,
-main {
-	padding: 0px 20px;
+.task-title {
+	display: block;
+	position: relative;
+	font-weight: normal;
+	span {
+		font-weight: bold;
+		display: inline;
+	}
 }
 
-li {
-	list-style-type: none;
+.pdf-link {
+	color: $white;
+	background-color: $primary;
+	margin-top: 20px;
+	padding: 10px 30px;
+	text-align: center;
+	display: inline-block;
+	border-radius: 20px;
+
+	&:hover {
+		transform: translate(2px, 2px);
+	}
 }
 
-a {
-	text-decoration: none;
-}
+.task-logo {
+	margin-bottom: 30px;
+	color: $black;
+	display: inline-block;
+	position: relative;
 
-.title {
-	font-size: 20px;
-	font-weight: $bold;
-}
+	.logo-title {
+		font-size: 30px;
+	}
+	.logo-subtitle {
+		font-size: 10px;
+	}
 
-.link {
-	color: $primary;
-	border-bottom: 1px solid $primary;
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: -7px;
+		left: 0px;
+		height: 2px;
+		width: 8px;
+		background-color: $black;
+	}
 }

@@ -29,8 +29,7 @@ const config: Configuration = {
   ],
 
   buildModules: [
-    '@nuxtjs/eslint-module',
-    '@nuxtjs/vuetify'
+		'@nuxtjs/eslint-module',
   ],
 	modules: [
 		'@nuxtjs/axios',

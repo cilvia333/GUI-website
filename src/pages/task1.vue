@@ -1,11 +1,18 @@
 <template lang="pug">
 main.task1
+  nuxt-link.task-logo(to="/")
+    h1.logo-title GUI表現研究
+    h2.logo-subtitle GUI Expression <br>
+      | Research
+  h2.task-title
+    | task1 
+    span 対になる絵
   .task1-contents
     .task1-button(@click="onClick")
       svg-icon.task1-icon(:name="state.data? 'all' : 'part'")
     .task1-letter-wrapper
       h3.task1-letter(:class="state.data? 'task1-letter-all' : 'task1-letter-part'") あ
-  a.task1-link.link(:href="state.dir") PDF
+  a.task1-link.pdf-link(:href="state.dir") 提出用PDFデータ
   p.text このページはパソコンのみしか動作確認してません。
 </template>
 
